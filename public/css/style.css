@@ -238,7 +238,7 @@ main article producto .descripcion{
 }
 
 main section article{
-    background-color: white;
+    box-shadow: none;
     transition: all 450ms;
 }
 
