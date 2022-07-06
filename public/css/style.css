@@ -168,13 +168,15 @@ main article div.contenedor-articulo i {
 }
 
 main article div.contenedor-articulo {
+    width: 100%;
     background-color: #FFF;
     border-top:1px solid #ebebeb;
     margin-top: -4px;
+    padding:15px;
 }
 
 .precio {
-    width:30%;
+    width: 30%;
     font-size: 18px;
 }
 
@@ -220,17 +222,33 @@ footer {
 
 @media (min-width: 361px){
 
+main article producto .descripcion{
+    display: none;
+}
+
+.producto:hover .descripcion{
+    display: block;
+    transition: all 450ms;
+
+}
 
 .burguer-button{
     display:none;
 }
 
-main section article {
+main section article{
+    background-color: white;
+    transition: all 450ms;
+}
+
+main section article:hover {
     box-shadow: 0px 0px 10px rgb(100 100 100);
 }
 
-.descripcion{
-    display:initial;
+
+main article div.contenedor-articulo:hover i{
+    transform: rotate(-90deg);
+    transition: all 450ms;
 }
 
 .main-navbar ul.formato-menu{
@@ -249,12 +267,44 @@ main section article {
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.control-footer, .iconos-footer, .texto1, .texto{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction:column;
+
+footer {
+    background-color: white;
+    text-align: center;
+    color:#666;
+    display:flex;
+    position: relative;
 }
 
+footer .texto{
+    margin:20px;
+    padding:10px;
+}
+
+footer h4 .texto1{
+    margin-top: 10px;
+}
+
+footer .iconos-footer{
+    color:#1259c3;
+    text-align:center;
+    margin-bottom: 10px;
+    font-size: 2em;
+    transition: all 450ms;
+}
+
+footer .iconos-footer:hover{
+    color:#EAC926;
+}
+
+footer .texto3{
+    text-align: left;
+    padding:10px;
+    margin-top: 5px;
+    position:absolute;
+    left: 2px;
+    bottom: -5px;
+}
 
 /* Desktop */
 @media (min-width: 769px){
